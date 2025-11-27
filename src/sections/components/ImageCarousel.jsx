@@ -2,10 +2,8 @@ import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
 const images = [
-  "https://images.unsplash.com/photo-1552566626-52f8b828add9",
   "https://images.unsplash.com/photo-1518770660439-4636190af475",
   "https://images.unsplash.com/photo-1503387762-592deb58ef4e",
-  "https://images.unsplash.com/photo-1534751516642-a1af1ef26a56",
   "https://images.unsplash.com/photo-1485827404703-89b55fcc595e",
 ];
 
