@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { Menu, X } from "lucide-react";
+import Logo from "../assets/logo.jpg";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
@@ -22,9 +23,9 @@ const Navbar = () => {
         {/* Logo + Lab Heading */}
         <div className="flex flex-col md:flex-row items-center gap-4 md:gap-6">
           <img
-            src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/NITT_logo.png/250px-NITT_logo.png"
+            src={Logo}
             alt="Institute Logo"
-            className="w-20 h-20 object-contain"
+            className="w-50s h-50 object-contain"
           />
 
           <div className="text-center md:text-left">
