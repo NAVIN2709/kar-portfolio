@@ -29,10 +29,10 @@ const Navbar = () => {
 
           <div className="text-center md:text-left">
             <h1 className="text-3xl md:text-4xl font-semibold tracking-wide">
-              Printed Electronics Lab
+              NanoSynergie Materials Innovation Lab (NSMIL)
             </h1>
             <p className="text-lg mt-1 opacity-90">
-              Department of Materials Engineering
+              Department of Metallurgy and Materials Science Engineering
             </p>
             <p className="text-lg -mt-1 opacity-90">
               National Institute of Technology, Tiruchirapalli

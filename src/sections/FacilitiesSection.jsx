@@ -1,73 +1,147 @@
 import React from "react";
+import Facility1 from "../assets/facility1.jpg";
+import Facility2 from "../assets/facility2.jpg";
+import Facility3 from "../assets/facility3.jpg";
+import Facility4 from "../assets/facility4.jpg";
+import Facility5 from "../assets/facility5.jpg";
+import Facility6 from "../assets/facility6.jpg";
+import Facility7 from "../assets/facility7.jpg";
+import Facility8 from "../assets/facility8.jpg";
+import Facility9 from "../assets/facility9.jpg";
+import Facility10 from "../assets/facility10.jpg";
+import Facility11 from "../assets/facility11.jpg";
+import Facility12 from "../assets/facility12.jpg";
+import Facility13 from "../assets/facility13.jpg";
 
-const mockFacilities = [
+const Softwares = [
   {
     id: 1,
-    name: "Spin Coater",
-    image: "https://images.unsplash.com/photo-1581091215367-59ab6b9c8c20?auto=format&w=800&q=80",
-    description: "Used for uniform thin-film deposition on substrates using controlled spin speeds."
+    name: "Casting Simulation Software – ADSTEFAN",
+    image: Facility1,
   },
   {
     id: 2,
-    name: "Tube Furnace",
-    image: "https://images.unsplash.com/photo-1581090467893-671f6a8f1b90?auto=format&w=800&q=80",
+    name: "Simufact Welding",
+    image: Facility2,
     description: "High-temperature furnace for annealing, sintering, and controlled thermal processes."
   },
   {
     id: 3,
-    name: "UV-Vis Spectrophotometer",
-    image: "https://images.unsplash.com/photo-1581093588401-22f1682cd88f?auto=format&w=800&q=80",
+    name: "Simufact Additive",
+    image: Facility3,
     description: "Used for optical characterization of materials, absorbance and transmission studies."
   },
   {
     id: 4,
-    name: "Probe Station",
-    image: "https://images.unsplash.com/photo-1581092433900-980c42b0cbb7?auto=format&w=800&q=80",
+    name: "Simufact Forming",
+    image: Facility4,
     description: "Electrical measurement setup for I-V characteristics of printed electronic devices."
-  },
-  {
-    id: 5,
-    name: "3D Printer",
-    image: "https://images.unsplash.com/photo-1581092334651-2f36d50fa3c3?auto=format&w=800&q=80",
-    description: "For fabricating polymer structures and components with high precision."
   }
 ];
 
+const Equipments = [
+  {
+    id: 1,
+    name: "Optical Emission Spectrometer",
+    image: Facility5,
+  },
+  {
+    id: 2,
+    name: "Probe Sonicator",
+    image: Facility6,
+  },
+  {
+    id: 3,
+    name: "Workstation Computer",
+    image: Facility7,
+  },
+  {
+    id: 4,
+    name: "Metallurgical Microscope",
+    image: Facility8,
+  },
+  {
+    id: 5,
+    name: "Stereo Zoom Microscope",
+    image: Facility9,
+  },
+  {
+    id: 6,
+    name: "High Energy Planetary Ball Mill",
+    image: Facility10,
+  },
+  {
+    id: 7,
+    name: "Electrodeposition Rectifier",
+    image: Facility11,
+  },
+  {
+    id: 8,
+    name: "Ion Exchange Column",
+    image: Facility12,
+  },
+  {
+    id: 9,
+    name: "Sedimentation Setup",
+    image: Facility13,
+  },
+];
+
+
 const FacilitiesSection = () => {
   return (
-    <div className="w-full flex flex-col items-center p-6 md:p-12 mt-24">
+    <div className="w-full flex flex-col items-center p-6 md:p-12 mt-0">
       
       {/* Title */}
-      <h1 className="text-4xl font-bold text-gray-900 mb-6 text-center">
+      <h1 className="text-4xl font-bold text-gray-900 mb-6 text-center border-b-2 pb-0 ">
         Laboratory Facilities
       </h1>
 
-      <p className="text-gray-600 max-w-3xl text-center text-lg leading-relaxed mb-12">
-        Our laboratory is equipped with modern instruments that support research in
-        printed electronics, materials processing, and characterization.  
-        Below is a list of major equipment currently available.
-      </p>
+      {/* Softwares */}
+      <h1 className="text-2xl font-bold text-gray-900 mb-6 text-center border-b-2 pb-0">
+        Softwares
+      </h1>
 
       {/* Equipment Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 max-w-6xl w-full">
-        {mockFacilities.map((equip) => (
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 space-y-5 max-w-6xl w-[70%]">
+        {Softwares.map((equip) => (
           <div
             key={equip.id}
-            className="bg-white rounded-2xl shadow-md border hover:shadow-xl transition p-4"
+            className="bg-white rounded-2xl shadow-md border hover:shadow-xl transition p-2 h-fit w-fit"
           >
             <img
               src={equip.image}
               alt={equip.name}
-              className="h-48 w-full object-cover rounded-xl"
+              className="h-full w-full object-cover rounded-xl"
             />
 
-            <h2 className="text-xl font-semibold text-gray-800 mt-4">
+            <h2 className="text-md font-semibold text-gray-800 mt-2">
               {equip.name}
             </h2>
+          </div>
+        ))}
+      </div>
 
-            <p className="text-gray-600 text-sm mt-2 leading-relaxed">
-              {equip.description}
-            </p>
+      {/* Equipments */}
+      <h1 className="text-2xl font-bold text-gray-900 mb-6 text-center border-b-2 pb-0 mt-10">
+        Equipments
+      </h1>
+
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 max-w-6xl w-fit">
+        {Equipments.map((equip) => (
+          <div
+            key={equip.id}
+            className="bg-white rounded-2xl shadow-md border hover:shadow-xl transition p-2 h-fit w-fit"
+          >
+            <img
+              src={equip.image}
+              alt={equip.name}
+              className="h-50 w-50 object-cover rounded-xl"
+            />
+
+            <h2 className="text-md font-semibold text-gray-800 mt-2">
+              {equip.name}
+            </h2>
           </div>
         ))}
       </div>
